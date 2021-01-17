@@ -54,6 +54,7 @@ output_path = os.path.join("Analysis", "analysis.txt")
 
 # Open the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w') as txtfile:
+# Writing the contents to the file    
     txtfile.write("Financial Analysis")
     txtfile.write("\n")
     txtfile.write("----------------------------")
