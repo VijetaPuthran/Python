@@ -49,5 +49,26 @@ with open(csvpath,encoding="utf-8") as csvfile:
     print("Greatest Increase in Profits: " + str(max_month_profit_loss_change) + " " +"($" + str(max(profit_loss_change)) +")")
     print("Greatest Decrease in Profits: " + str(min_month_profit_loss_change) + " " +"($" + str(min(profit_loss_change)) +")")
 
+    # Specifying the path to the file to write the summary
+output_path = os.path.join("Analysis", "analysis.txt")
 
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w') as txtfile:
+    txtfile.write("Financial Analysis")
+    txtfile.write("\n")
+    txtfile.write("----------------------------")
+    txtfile.write("\n")
+    txtfile.write("Total months: " + str(len(months)))
+    txtfile.write("\n")
+    txtfile.write("Total: " + "$"+ str(sum))
+    txtfile.write("\n")
+    txtfile.write("Average Change: " + "$"+ str(round(average, 2)))
+    txtfile.write("\n")
+    txtfile.write("Greatest Increase in Profits: " + str(max_month_profit_loss_change) + " " +"($" + str(max(profit_loss_change)) +")")
+    txtfile.write("\n")
+    txtfile.write("Greatest Decrease in Profits: " + str(min_month_profit_loss_change) + " " +"($" + str(min(profit_loss_change)) +")")
+
+
+
+    
 
