@@ -58,7 +58,7 @@ with open(output_path, 'w') as txtfile:
 # Writing the contents to the file    
     txtfile.write("Financial Analysis")
     txtfile.write("\n")
-    txtfile.write("----------------------------")
+    txtfile.write("-----------------------------")
     txtfile.write("\n")
     txtfile.write("Total months: " + str(len(months)))
     txtfile.write("\n")
