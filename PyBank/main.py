@@ -2,8 +2,9 @@ import os
 import csv
 from statistics import mean
 
+#Specifying path of the csv file
 csvpath = os.path.join('Resources', '02-Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv')
-
+#Reading using csv module
 with open(csvpath,encoding="utf-8") as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
