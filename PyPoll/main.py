@@ -45,6 +45,7 @@ with open(csvpath,encoding="utf-8") as csvfile:
 #unique(candidates) 
 #['Correy' 'Khan' 'Li' "O'Tooley"]
 
+#Calculating percentage of votes for each candidate and converting them to 3 decimal places
 correy_perc = (len(correy)/len(total_votes) *100)
 correy_perc_float = "{:.3f}".format(correy_perc)
 khan_perc = (len(khan)/len(total_votes) *100)
@@ -53,7 +54,10 @@ li_perc = (len(li)/len(total_votes) *100)
 li_perc_float = "{:.3f}".format(li_perc)
 oTooley_perc = (len(oTooley)/len(total_votes) *100)
 oTooley_perc_float = "{:.3f}".format(oTooley_perc)
+
+#Calculating winner based on maximum percentage of votes
 winner = max(correy_perc, khan_perc, li_perc, oTooley_perc )
+#Condition to provide the name of the candidate based on maximum percentage of votes for winner
 if winner == correy_perc:
     election_winner = "Correy"
 elif winner == khan_perc:
@@ -62,7 +66,7 @@ elif winner == li_perc:
     election_winner = "Li"  
 elif winner == oTooley_perc:
     election_winner = "O'Tooley"    
-
+#Printing the results to the terminal
 print("Election Results")
 print("-------------------------")
 print("Total Votes: " + str(len(total_votes)))
