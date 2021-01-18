@@ -10,7 +10,7 @@ with open(csvpath,encoding="utf-8") as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    # Read the header row first (skip this step if there is no header)
+    # Reading the header row first 
     csv_header = next(csvreader)
     
     #Initializing the variables
