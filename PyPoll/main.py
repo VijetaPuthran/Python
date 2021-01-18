@@ -75,3 +75,30 @@ print("-------------------------")
 print("Winner: " + election_winner)
 print("-------------------------")
 
+# Specifying the path to the file to write the summary
+output_path = os.path.join("Analysis", "analysis.txt")
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w') as txtfile:
+# Writing the contents to the file    
+    txtfile.write("Election Results")
+    txtfile.write("\n")
+    txtfile.write("----------------------------")
+    txtfile.write("\n")
+    txtfile.write("Total Votes: " + str(len(total_votes)))
+    txtfile.write("\n")
+    txtfile.write("----------------------------")
+    txtfile.write("\n")
+    txtfile.write(f"Khan : {khan_perc_float}% ({len(khan)})")
+    txtfile.write("\n")
+    txtfile.write(f"Correy : {correy_perc_float}% ({len(correy)})")
+    txtfile.write("\n")
+    txtfile.write(f"Li : {li_perc_float}% ({len(li)})")
+    txtfile.write("\n")
+    txtfile.write(f"O'Tooley : {oTooley_perc_float}% ({len(oTooley)})")
+    txtfile.write("\n")
+    txtfile.write("----------------------------")
+    txtfile.write("\n")
+    txtfile.write("Winner: " + election_winner)
+    txtfile.write("\n")
+    txtfile.write("-------------------------")
